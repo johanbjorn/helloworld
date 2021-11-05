@@ -1,0 +1,916 @@
+{
+    "version": "9.0.0",
+    "artifacts": {
+        "Tree": {
+            "type": "cdk:tree",
+            "properties": {
+                "file": "tree.json"
+            }
+        },
+        "helloworld": {
+            "type": "aws:cloudformation:stack",
+            "environment": "aws://unknown-account/unknown-region",
+            "properties": {
+                "templateFile": "helloworld.template.json"
+            },
+            "metadata": {
+                "/helloworld": [
+                    {
+                        "type": "aws:cdk:asset",
+                        "data": {
+                            "repositoryName": "aws-cdk/assets",
+                            "imageTag": "635cc3effa8dc19fb7366869c3e45bc35ccad459955acc1638041a672746c4e3",
+                            "id": "635cc3effa8dc19fb7366869c3e45bc35ccad459955acc1638041a672746c4e3",
+                            "packaging": "container-image",
+                            "path": "/home/johan/projects/test-out/helloworld/hello_world",
+                            "sourceHash": "635cc3effa8dc19fb7366869c3e45bc35ccad459955acc1638041a672746c4e3"
+                        },
+                        "trace": [
+                            "ConstructNode.addMetadata (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/construct-compat.js:405:62)",
+                            "LegacyStackSynthesizer.doAddDockerImageAsset (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:150:29)",
+                            "LegacyStackSynthesizer.addDockerImageAsset (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:105:25)",
+                            "Stack.addDockerImageAsset (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/stack.js:419:33)",
+                            "LegacyStackSynthesizer.addDockerImageAsset (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:109:31)",
+                            "new DockerImageAsset (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-ecr-assets/lib/image-asset.js:96:44)",
+                            "AssetImageCode.bind (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/code.js:455:23)",
+                            "new Function (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function.js:97:33)",
+                            "new DockerImageFunction (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/image-function.js:58:9)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8432:58",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "Kernel._create (/tmp/tmpz_1kb0vf/lib/program.js:8432:34)",
+                            "Kernel.create (/tmp/tmpz_1kb0vf/lib/program.js:8173:29)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    },
+                    {
+                        "type": "aws:cdk:asset",
+                        "data": {
+                            "path": "/home/johan/projects/test-out/helloworld/hello_world",
+                            "id": "1f7fd335a312925d301397001b38a034e81ec994b46a19794997a9696bc4fb74",
+                            "packaging": "zip",
+                            "sourceHash": "1f7fd335a312925d301397001b38a034e81ec994b46a19794997a9696bc4fb74",
+                            "s3BucketParameter": "AssetParameters1f7fd335a312925d301397001b38a034e81ec994b46a19794997a9696bc4fb74S3Bucket20D06E41",
+                            "s3KeyParameter": "AssetParameters1f7fd335a312925d301397001b38a034e81ec994b46a19794997a9696bc4fb74S3VersionKey3CD9D467",
+                            "artifactHashParameter": "AssetParameters1f7fd335a312925d301397001b38a034e81ec994b46a19794997a9696bc4fb74ArtifactHash1AC7A5ED"
+                        },
+                        "trace": [
+                            "ConstructNode.addMetadata (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/construct-compat.js:405:62)",
+                            "LegacyStackSynthesizer.doAddFileAsset (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:175:29)",
+                            "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:83:25)",
+                            "Stack.addFileAsset (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/stack.js:410:33)",
+                            "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:87:31)",
+                            "new Asset (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:40:44)",
+                            "AssetCode.bind (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/code.js:258:26)",
+                            "new Function (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function.js:97:33)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8432:58",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "Kernel._create (/tmp/tmpz_1kb0vf/lib/program.js:8432:34)",
+                            "Kernel.create (/tmp/tmpz_1kb0vf/lib/program.js:8173:29)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/helloworld/ServiceRole/Resource": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "helloworldServiceRole68DF95A4",
+                        "trace": [
+                            "new Role (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+                            "new Function (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function.js:79:35)",
+                            "new DockerImageFunction (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/image-function.js:58:9)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8432:58",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "Kernel._create (/tmp/tmpz_1kb0vf/lib/program.js:8432:34)",
+                            "Kernel.create (/tmp/tmpz_1kb0vf/lib/program.js:8173:29)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/helloworld/Resource": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "helloworldB7C45939",
+                        "trace": [
+                            "new Function (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function.js:135:26)",
+                            "new DockerImageFunction (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/image-function.js:58:9)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8432:58",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "Kernel._create (/tmp/tmpz_1kb0vf/lib/program.js:8432:34)",
+                            "Kernel.create (/tmp/tmpz_1kb0vf/lib/program.js:8173:29)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/helloworld60C9E878:ApiEventSourceA7A86A4F/Resource": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "helloworld60C9E878ApiEventSourceA7A86A4F19AEBC58",
+                        "trace": [
+                            "new RestApi (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:401:26)",
+                            "ApiEventSource.bind (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda-event-sources/lib/api.js:33:19)",
+                            "DockerImageFunction.addEventSource (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:166:16)",
+                            "new Function (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function.js:180:18)",
+                            "new DockerImageFunction (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/image-function.js:58:9)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8432:58",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "Kernel._create (/tmp/tmpz_1kb0vf/lib/program.js:8432:34)",
+                            "Kernel.create (/tmp/tmpz_1kb0vf/lib/program.js:8173:29)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/helloworld60C9E878:ApiEventSourceA7A86A4F/CloudWatchRole/Resource": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "helloworld60C9E878ApiEventSourceA7A86A4FCloudWatchRole0EC1069B",
+                        "trace": [
+                            "new Role (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+                            "RestApi._configureCloudWatchRole (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:250:22)",
+                            "new RestApi (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:417:18)",
+                            "ApiEventSource.bind (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda-event-sources/lib/api.js:33:19)",
+                            "DockerImageFunction.addEventSource (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:166:16)",
+                            "new Function (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function.js:180:18)",
+                            "new DockerImageFunction (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/image-function.js:58:9)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8432:58",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "Kernel._create (/tmp/tmpz_1kb0vf/lib/program.js:8432:34)",
+                            "Kernel.create (/tmp/tmpz_1kb0vf/lib/program.js:8173:29)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/helloworld60C9E878:ApiEventSourceA7A86A4F/Account": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "helloworld60C9E878ApiEventSourceA7A86A4FAccount3FDC3943",
+                        "trace": [
+                            "RestApi._configureCloudWatchRole (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:254:26)",
+                            "new RestApi (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:417:18)",
+                            "ApiEventSource.bind (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda-event-sources/lib/api.js:33:19)",
+                            "DockerImageFunction.addEventSource (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:166:16)",
+                            "new Function (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function.js:180:18)",
+                            "new DockerImageFunction (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/image-function.js:58:9)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8432:58",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "Kernel._create (/tmp/tmpz_1kb0vf/lib/program.js:8432:34)",
+                            "Kernel.create (/tmp/tmpz_1kb0vf/lib/program.js:8173:29)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/helloworld60C9E878:ApiEventSourceA7A86A4F/Deployment/Resource": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "helloworld60C9E878ApiEventSourceA7A86A4FDeployment7FC8BDB8159f9494e176998cee5b41853ce17c3e",
+                        "trace": [
+                            "new Deployment (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/deployment.js:48:25)",
+                            "RestApi._configureDeployment (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:278:38)",
+                            "new RestApi (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:419:14)",
+                            "ApiEventSource.bind (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda-event-sources/lib/api.js:33:19)",
+                            "DockerImageFunction.addEventSource (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:166:16)",
+                            "new Function (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function.js:180:18)",
+                            "new DockerImageFunction (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/image-function.js:58:9)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8432:58",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "Kernel._create (/tmp/tmpz_1kb0vf/lib/program.js:8432:34)",
+                            "Kernel.create (/tmp/tmpz_1kb0vf/lib/program.js:8173:29)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/helloworld60C9E878:ApiEventSourceA7A86A4F/DeploymentStage.prod/Resource": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "helloworld60C9E878ApiEventSourceA7A86A4FDeploymentStageprod6157C058",
+                        "trace": [
+                            "new Stage (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/stage.js:61:26)",
+                            "RestApi._configureDeployment (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:286:36)",
+                            "new RestApi (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:419:14)",
+                            "ApiEventSource.bind (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda-event-sources/lib/api.js:33:19)",
+                            "DockerImageFunction.addEventSource (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:166:16)",
+                            "new Function (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function.js:180:18)",
+                            "new DockerImageFunction (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/image-function.js:58:9)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8432:58",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "Kernel._create (/tmp/tmpz_1kb0vf/lib/program.js:8432:34)",
+                            "Kernel.create (/tmp/tmpz_1kb0vf/lib/program.js:8173:29)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/helloworld60C9E878:ApiEventSourceA7A86A4F/Endpoint": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "helloworld60C9E878ApiEventSourceA7A86A4FEndpoint7C9CE5E9",
+                        "trace": [
+                            "RestApi._configureDeployment (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:290:13)",
+                            "new RestApi (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:419:14)",
+                            "ApiEventSource.bind (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda-event-sources/lib/api.js:33:19)",
+                            "DockerImageFunction.addEventSource (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:166:16)",
+                            "new Function (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function.js:180:18)",
+                            "new DockerImageFunction (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/image-function.js:58:9)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8432:58",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "Kernel._create (/tmp/tmpz_1kb0vf/lib/program.js:8432:34)",
+                            "Kernel.create (/tmp/tmpz_1kb0vf/lib/program.js:8173:29)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/helloworld60C9E878:ApiEventSourceA7A86A4F/Default/hello/Resource": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "helloworld60C9E878ApiEventSourceA7A86A4FhelloDC920CAA",
+                        "trace": [
+                            "new Resource (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:231:26)",
+                            "RootResource.addResource (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:28:16)",
+                            "RootResource.resourceForPath (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:198:29)",
+                            "RootResource.resourceForPath (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:189:25)",
+                            "ApiEventSource.bind (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda-event-sources/lib/api.js:37:35)",
+                            "DockerImageFunction.addEventSource (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:166:16)",
+                            "new Function (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function.js:180:18)",
+                            "new DockerImageFunction (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/image-function.js:58:9)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8432:58",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "Kernel._create (/tmp/tmpz_1kb0vf/lib/program.js:8432:34)",
+                            "Kernel.create (/tmp/tmpz_1kb0vf/lib/program.js:8173:29)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/helloworld60C9E878:ApiEventSourceA7A86A4F/Default/hello/get/ApiPermission.helloworldhelloworld60C9E878ApiEventSourceA7A86A4F22D02315.GET..hello": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "helloworld60C9E878ApiEventSourceA7A86A4FhellogetApiPermissionhelloworldhelloworld60C9E878ApiEventSourceA7A86A4F22D02315GEThello5689FC84",
+                        "trace": [
+                            "DockerImageFunction.addPermission (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:40:9)",
+                            "LambdaIntegration.bind (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.js:44:22)",
+                            "new Method (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/method.js:41:40)",
+                            "Resource.addMethod (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:36:16)",
+                            "ApiEventSource.bind (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda-event-sources/lib/api.js:38:18)",
+                            "DockerImageFunction.addEventSource (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:166:16)",
+                            "new Function (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function.js:180:18)",
+                            "new DockerImageFunction (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/image-function.js:58:9)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8432:58",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "Kernel._create (/tmp/tmpz_1kb0vf/lib/program.js:8432:34)",
+                            "Kernel.create (/tmp/tmpz_1kb0vf/lib/program.js:8173:29)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/helloworld60C9E878:ApiEventSourceA7A86A4F/Default/hello/get/ApiPermission.Test.helloworldhelloworld60C9E878ApiEventSourceA7A86A4F22D02315.GET..hello": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "helloworld60C9E878ApiEventSourceA7A86A4FhellogetApiPermissionTesthelloworldhelloworld60C9E878ApiEventSourceA7A86A4F22D02315GEThello1CEAD95B",
+                        "trace": [
+                            "DockerImageFunction.addPermission (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:40:9)",
+                            "LambdaIntegration.bind (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.js:51:26)",
+                            "new Method (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/method.js:41:40)",
+                            "Resource.addMethod (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:36:16)",
+                            "ApiEventSource.bind (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda-event-sources/lib/api.js:38:18)",
+                            "DockerImageFunction.addEventSource (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:166:16)",
+                            "new Function (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function.js:180:18)",
+                            "new DockerImageFunction (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/image-function.js:58:9)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8432:58",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "Kernel._create (/tmp/tmpz_1kb0vf/lib/program.js:8432:34)",
+                            "Kernel.create (/tmp/tmpz_1kb0vf/lib/program.js:8173:29)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/helloworld60C9E878:ApiEventSourceA7A86A4F/Default/hello/get/Resource": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "helloworld60C9E878ApiEventSourceA7A86A4Fhelloget87CF0A8E",
+                        "trace": [
+                            "new Method (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/method.js:57:26)",
+                            "Resource.addMethod (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:36:16)",
+                            "ApiEventSource.bind (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda-event-sources/lib/api.js:38:18)",
+                            "DockerImageFunction.addEventSource (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:166:16)",
+                            "new Function (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function.js:180:18)",
+                            "new DockerImageFunction (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/image-function.js:58:9)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8432:58",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "Kernel._create (/tmp/tmpz_1kb0vf/lib/program.js:8432:34)",
+                            "Kernel.create (/tmp/tmpz_1kb0vf/lib/program.js:8173:29)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/cdk-hello-world-lambda/ServiceRole/Resource": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "cdkhelloworldlambdaServiceRole495FD13E",
+                        "trace": [
+                            "new Role (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+                            "new Function (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function.js:79:35)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8432:58",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "Kernel._create (/tmp/tmpz_1kb0vf/lib/program.js:8432:34)",
+                            "Kernel.create (/tmp/tmpz_1kb0vf/lib/program.js:8173:29)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/cdk-hello-world-lambda/Resource": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "cdkhelloworldlambda1060AF2E",
+                        "trace": [
+                            "new Function (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function.js:135:26)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8432:58",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "Kernel._create (/tmp/tmpz_1kb0vf/lib/program.js:8432:34)",
+                            "Kernel.create (/tmp/tmpz_1kb0vf/lib/program.js:8173:29)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/AssetParameters/1f7fd335a312925d301397001b38a034e81ec994b46a19794997a9696bc4fb74/S3Bucket": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "AssetParameters1f7fd335a312925d301397001b38a034e81ec994b46a19794997a9696bc4fb74S3Bucket20D06E41",
+                        "trace": [
+                            "new FileAssetParameters (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:12:36)",
+                            "LegacyStackSynthesizer.doAddFileAsset (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:162:22)",
+                            "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:83:25)",
+                            "Stack.addFileAsset (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/stack.js:410:33)",
+                            "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:87:31)",
+                            "new Asset (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:40:44)",
+                            "AssetCode.bind (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/code.js:258:26)",
+                            "new Function (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function.js:97:33)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8432:58",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "Kernel._create (/tmp/tmpz_1kb0vf/lib/program.js:8432:34)",
+                            "Kernel.create (/tmp/tmpz_1kb0vf/lib/program.js:8173:29)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/AssetParameters/1f7fd335a312925d301397001b38a034e81ec994b46a19794997a9696bc4fb74/S3VersionKey": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "AssetParameters1f7fd335a312925d301397001b38a034e81ec994b46a19794997a9696bc4fb74S3VersionKey3CD9D467",
+                        "trace": [
+                            "new FileAssetParameters (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:16:35)",
+                            "LegacyStackSynthesizer.doAddFileAsset (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:162:22)",
+                            "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:83:25)",
+                            "Stack.addFileAsset (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/stack.js:410:33)",
+                            "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:87:31)",
+                            "new Asset (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:40:44)",
+                            "AssetCode.bind (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/code.js:258:26)",
+                            "new Function (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function.js:97:33)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8432:58",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "Kernel._create (/tmp/tmpz_1kb0vf/lib/program.js:8432:34)",
+                            "Kernel.create (/tmp/tmpz_1kb0vf/lib/program.js:8173:29)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/AssetParameters/1f7fd335a312925d301397001b38a034e81ec994b46a19794997a9696bc4fb74/ArtifactHash": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "AssetParameters1f7fd335a312925d301397001b38a034e81ec994b46a19794997a9696bc4fb74ArtifactHash1AC7A5ED",
+                        "trace": [
+                            "new FileAssetParameters (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:20:38)",
+                            "LegacyStackSynthesizer.doAddFileAsset (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:162:22)",
+                            "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:83:25)",
+                            "Stack.addFileAsset (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/stack.js:410:33)",
+                            "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:87:31)",
+                            "new Asset (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:40:44)",
+                            "AssetCode.bind (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/code.js:258:26)",
+                            "new Function (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function.js:97:33)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8432:58",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "Kernel._create (/tmp/tmpz_1kb0vf/lib/program.js:8432:34)",
+                            "Kernel.create (/tmp/tmpz_1kb0vf/lib/program.js:8173:29)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/helloworldcdkhelloworldlambda6274216A:ApiEventSourceA7A86A4F/Resource": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "helloworldcdkhelloworldlambda6274216AApiEventSourceA7A86A4F10B72530",
+                        "trace": [
+                            "new RestApi (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:401:26)",
+                            "ApiEventSource.bind (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda-event-sources/lib/api.js:33:19)",
+                            "Function.addEventSource (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:166:16)",
+                            "new Function (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function.js:180:18)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8432:58",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "Kernel._create (/tmp/tmpz_1kb0vf/lib/program.js:8432:34)",
+                            "Kernel.create (/tmp/tmpz_1kb0vf/lib/program.js:8173:29)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/helloworldcdkhelloworldlambda6274216A:ApiEventSourceA7A86A4F/CloudWatchRole/Resource": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "helloworldcdkhelloworldlambda6274216AApiEventSourceA7A86A4FCloudWatchRole074B70ED",
+                        "trace": [
+                            "new Role (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+                            "RestApi._configureCloudWatchRole (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:250:22)",
+                            "new RestApi (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:417:18)",
+                            "ApiEventSource.bind (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda-event-sources/lib/api.js:33:19)",
+                            "Function.addEventSource (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:166:16)",
+                            "new Function (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function.js:180:18)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8432:58",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "Kernel._create (/tmp/tmpz_1kb0vf/lib/program.js:8432:34)",
+                            "Kernel.create (/tmp/tmpz_1kb0vf/lib/program.js:8173:29)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/helloworldcdkhelloworldlambda6274216A:ApiEventSourceA7A86A4F/Account": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "helloworldcdkhelloworldlambda6274216AApiEventSourceA7A86A4FAccount170377AF",
+                        "trace": [
+                            "RestApi._configureCloudWatchRole (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:254:26)",
+                            "new RestApi (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:417:18)",
+                            "ApiEventSource.bind (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda-event-sources/lib/api.js:33:19)",
+                            "Function.addEventSource (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:166:16)",
+                            "new Function (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function.js:180:18)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8432:58",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "Kernel._create (/tmp/tmpz_1kb0vf/lib/program.js:8432:34)",
+                            "Kernel.create (/tmp/tmpz_1kb0vf/lib/program.js:8173:29)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/helloworldcdkhelloworldlambda6274216A:ApiEventSourceA7A86A4F/Deployment/Resource": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "helloworldcdkhelloworldlambda6274216AApiEventSourceA7A86A4FDeployment769BFC25a7244c4e4a4fe375d13ad6c6e4dfb635",
+                        "trace": [
+                            "new Deployment (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/deployment.js:48:25)",
+                            "RestApi._configureDeployment (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:278:38)",
+                            "new RestApi (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:419:14)",
+                            "ApiEventSource.bind (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda-event-sources/lib/api.js:33:19)",
+                            "Function.addEventSource (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:166:16)",
+                            "new Function (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function.js:180:18)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8432:58",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "Kernel._create (/tmp/tmpz_1kb0vf/lib/program.js:8432:34)",
+                            "Kernel.create (/tmp/tmpz_1kb0vf/lib/program.js:8173:29)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/helloworldcdkhelloworldlambda6274216A:ApiEventSourceA7A86A4F/DeploymentStage.prod/Resource": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "helloworldcdkhelloworldlambda6274216AApiEventSourceA7A86A4FDeploymentStageprodFEBC7A59",
+                        "trace": [
+                            "new Stage (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/stage.js:61:26)",
+                            "RestApi._configureDeployment (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:286:36)",
+                            "new RestApi (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:419:14)",
+                            "ApiEventSource.bind (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda-event-sources/lib/api.js:33:19)",
+                            "Function.addEventSource (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:166:16)",
+                            "new Function (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function.js:180:18)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8432:58",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "Kernel._create (/tmp/tmpz_1kb0vf/lib/program.js:8432:34)",
+                            "Kernel.create (/tmp/tmpz_1kb0vf/lib/program.js:8173:29)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/helloworldcdkhelloworldlambda6274216A:ApiEventSourceA7A86A4F/Endpoint": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "helloworldcdkhelloworldlambda6274216AApiEventSourceA7A86A4FEndpoint2AE12793",
+                        "trace": [
+                            "RestApi._configureDeployment (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:290:13)",
+                            "new RestApi (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:419:14)",
+                            "ApiEventSource.bind (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda-event-sources/lib/api.js:33:19)",
+                            "Function.addEventSource (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:166:16)",
+                            "new Function (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function.js:180:18)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8432:58",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "Kernel._create (/tmp/tmpz_1kb0vf/lib/program.js:8432:34)",
+                            "Kernel.create (/tmp/tmpz_1kb0vf/lib/program.js:8173:29)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/helloworldcdkhelloworldlambda6274216A:ApiEventSourceA7A86A4F/Default/hello/Resource": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "helloworldcdkhelloworldlambda6274216AApiEventSourceA7A86A4Fhello552E9FFB",
+                        "trace": [
+                            "new Resource (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:231:26)",
+                            "RootResource.addResource (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:28:16)",
+                            "RootResource.resourceForPath (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:198:29)",
+                            "RootResource.resourceForPath (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:189:25)",
+                            "ApiEventSource.bind (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda-event-sources/lib/api.js:37:35)",
+                            "Function.addEventSource (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:166:16)",
+                            "new Function (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function.js:180:18)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8432:58",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "Kernel._create (/tmp/tmpz_1kb0vf/lib/program.js:8432:34)",
+                            "Kernel.create (/tmp/tmpz_1kb0vf/lib/program.js:8173:29)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/helloworldcdkhelloworldlambda6274216A:ApiEventSourceA7A86A4F/Default/hello/get/ApiPermission.helloworldhelloworldcdkhelloworldlambda6274216AApiEventSourceA7A86A4F2056FC4C.GET..hello": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "helloworldcdkhelloworldlambda6274216AApiEventSourceA7A86A4FhellogetApiPermissionhelloworldhelloworldcdkhelloworldlambda6274216AApiEventSourceA7A86A4F2056FC4CGEThelloFC56ADB6",
+                        "trace": [
+                            "Function.addPermission (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:40:9)",
+                            "LambdaIntegration.bind (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.js:44:22)",
+                            "new Method (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/method.js:41:40)",
+                            "Resource.addMethod (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:36:16)",
+                            "ApiEventSource.bind (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda-event-sources/lib/api.js:38:18)",
+                            "Function.addEventSource (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:166:16)",
+                            "new Function (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function.js:180:18)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8432:58",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "Kernel._create (/tmp/tmpz_1kb0vf/lib/program.js:8432:34)",
+                            "Kernel.create (/tmp/tmpz_1kb0vf/lib/program.js:8173:29)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/helloworldcdkhelloworldlambda6274216A:ApiEventSourceA7A86A4F/Default/hello/get/ApiPermission.Test.helloworldhelloworldcdkhelloworldlambda6274216AApiEventSourceA7A86A4F2056FC4C.GET..hello": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "helloworldcdkhelloworldlambda6274216AApiEventSourceA7A86A4FhellogetApiPermissionTesthelloworldhelloworldcdkhelloworldlambda6274216AApiEventSourceA7A86A4F2056FC4CGEThelloF99FDE83",
+                        "trace": [
+                            "Function.addPermission (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:40:9)",
+                            "LambdaIntegration.bind (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.js:51:26)",
+                            "new Method (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/method.js:41:40)",
+                            "Resource.addMethod (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:36:16)",
+                            "ApiEventSource.bind (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda-event-sources/lib/api.js:38:18)",
+                            "Function.addEventSource (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:166:16)",
+                            "new Function (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function.js:180:18)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8432:58",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "Kernel._create (/tmp/tmpz_1kb0vf/lib/program.js:8432:34)",
+                            "Kernel.create (/tmp/tmpz_1kb0vf/lib/program.js:8173:29)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/helloworldcdkhelloworldlambda6274216A:ApiEventSourceA7A86A4F/Default/hello/get/Resource": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "helloworldcdkhelloworldlambda6274216AApiEventSourceA7A86A4Fhelloget62CE05FE",
+                        "trace": [
+                            "new Method (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/method.js:57:26)",
+                            "Resource.addMethod (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:36:16)",
+                            "ApiEventSource.bind (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda-event-sources/lib/api.js:38:18)",
+                            "Function.addEventSource (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:166:16)",
+                            "new Function (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function.js:180:18)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8432:58",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "Kernel._create (/tmp/tmpz_1kb0vf/lib/program.js:8432:34)",
+                            "Kernel.create (/tmp/tmpz_1kb0vf/lib/program.js:8173:29)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/cdk-hello-world-rest-api/Resource": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "cdkhelloworldrestapi0151D707",
+                        "trace": [
+                            "new RestApi (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:401:26)",
+                            "new LambdaRestApi (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.js:25:9)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8432:58",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "Kernel._create (/tmp/tmpz_1kb0vf/lib/program.js:8432:34)",
+                            "Kernel.create (/tmp/tmpz_1kb0vf/lib/program.js:8173:29)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/cdk-hello-world-rest-api/CloudWatchRole/Resource": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "cdkhelloworldrestapiCloudWatchRole3B7B7F2D",
+                        "trace": [
+                            "new Role (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+                            "LambdaRestApi._configureCloudWatchRole (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:250:22)",
+                            "new RestApi (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:417:18)",
+                            "new LambdaRestApi (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.js:25:9)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8432:58",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "Kernel._create (/tmp/tmpz_1kb0vf/lib/program.js:8432:34)",
+                            "Kernel.create (/tmp/tmpz_1kb0vf/lib/program.js:8173:29)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/cdk-hello-world-rest-api/Account": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "cdkhelloworldrestapiAccount7AB3CA83",
+                        "trace": [
+                            "LambdaRestApi._configureCloudWatchRole (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:254:26)",
+                            "new RestApi (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:417:18)",
+                            "new LambdaRestApi (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.js:25:9)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8432:58",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "Kernel._create (/tmp/tmpz_1kb0vf/lib/program.js:8432:34)",
+                            "Kernel.create (/tmp/tmpz_1kb0vf/lib/program.js:8173:29)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/cdk-hello-world-rest-api/Deployment/Resource": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "cdkhelloworldrestapiDeployment3A9A66AA6e2c258ec7595b3a8a4b6e6ce025b5e5",
+                        "trace": [
+                            "new Deployment (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/deployment.js:48:25)",
+                            "LambdaRestApi._configureDeployment (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:278:38)",
+                            "new RestApi (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:419:14)",
+                            "new LambdaRestApi (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.js:25:9)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8432:58",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "Kernel._create (/tmp/tmpz_1kb0vf/lib/program.js:8432:34)",
+                            "Kernel.create (/tmp/tmpz_1kb0vf/lib/program.js:8173:29)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/cdk-hello-world-rest-api/DeploymentStage.prod/Resource": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "cdkhelloworldrestapiDeploymentStageprod23974668",
+                        "trace": [
+                            "new Stage (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/stage.js:61:26)",
+                            "LambdaRestApi._configureDeployment (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:286:36)",
+                            "new RestApi (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:419:14)",
+                            "new LambdaRestApi (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.js:25:9)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8432:58",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "Kernel._create (/tmp/tmpz_1kb0vf/lib/program.js:8432:34)",
+                            "Kernel.create (/tmp/tmpz_1kb0vf/lib/program.js:8173:29)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/cdk-hello-world-rest-api/Endpoint": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "cdkhelloworldrestapiEndpoint8040A06B",
+                        "trace": [
+                            "LambdaRestApi._configureDeployment (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:290:13)",
+                            "new RestApi (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:419:14)",
+                            "new LambdaRestApi (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.js:25:9)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8432:58",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "Kernel._create (/tmp/tmpz_1kb0vf/lib/program.js:8432:34)",
+                            "Kernel.create (/tmp/tmpz_1kb0vf/lib/program.js:8173:29)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/cdk-hello-world-rest-api/Default/hello/Resource": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "cdkhelloworldrestapihelloF8097220",
+                        "trace": [
+                            "new Resource (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:231:26)",
+                            "RootResource.addResource (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:28:16)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8248:134",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8248:107",
+                            "Kernel._ensureSync (/tmp/tmpz_1kb0vf/lib/program.js:8841:28)",
+                            "Kernel.invoke (/tmp/tmpz_1kb0vf/lib/program.js:8248:34)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/cdk-hello-world-rest-api/Default/hello/GET/ApiPermission.helloworldcdkhelloworldrestapi965A9B49.GET..hello": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "cdkhelloworldrestapihelloGETApiPermissionhelloworldcdkhelloworldrestapi965A9B49GEThello99E59258",
+                        "trace": [
+                            "DockerImageFunction.addPermission (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:40:9)",
+                            "LambdaIntegration.bind (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.js:44:22)",
+                            "new Method (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/method.js:41:40)",
+                            "Resource.addMethod (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:36:16)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8248:134",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8248:107",
+                            "Kernel._ensureSync (/tmp/tmpz_1kb0vf/lib/program.js:8841:28)",
+                            "Kernel.invoke (/tmp/tmpz_1kb0vf/lib/program.js:8248:34)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/cdk-hello-world-rest-api/Default/hello/GET/ApiPermission.Test.helloworldcdkhelloworldrestapi965A9B49.GET..hello": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "cdkhelloworldrestapihelloGETApiPermissionTesthelloworldcdkhelloworldrestapi965A9B49GEThello97D8E78E",
+                        "trace": [
+                            "DockerImageFunction.addPermission (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:40:9)",
+                            "LambdaIntegration.bind (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.js:51:26)",
+                            "new Method (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/method.js:41:40)",
+                            "Resource.addMethod (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:36:16)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8248:134",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8248:107",
+                            "Kernel._ensureSync (/tmp/tmpz_1kb0vf/lib/program.js:8841:28)",
+                            "Kernel.invoke (/tmp/tmpz_1kb0vf/lib/program.js:8248:34)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/cdk-hello-world-rest-api/Default/hello/GET/Resource": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "cdkhelloworldrestapihelloGET05A45116",
+                        "trace": [
+                            "new Method (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/method.js:57:26)",
+                            "Resource.addMethod (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:36:16)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8248:134",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8248:107",
+                            "Kernel._ensureSync (/tmp/tmpz_1kb0vf/lib/program.js:8841:28)",
+                            "Kernel.invoke (/tmp/tmpz_1kb0vf/lib/program.js:8248:34)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/CDKMetadata/Default": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "CDKMetadata",
+                        "trace": [
+                            "new MetadataResource (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:22:30)",
+                            "/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:9",
+                            "visit (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/private/synthesis.js:184:9)",
+                            "visit (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/private/synthesis.js:181:9)",
+                            "injectMetadataResources (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/private/synthesis.js:117:5)",
+                            "Object.synthesize (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+                            "App.synth (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8248:134",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8248:107",
+                            "Kernel._ensureSync (/tmp/tmpz_1kb0vf/lib/program.js:8841:28)",
+                            "Kernel.invoke (/tmp/tmpz_1kb0vf/lib/program.js:8248:34)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ],
+                "/helloworld/CDKMetadata/Condition": [
+                    {
+                        "type": "aws:cdk:logicalId",
+                        "data": "CDKMetadataAvailable",
+                        "trace": [
+                            "new MetadataResource (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:30:35)",
+                            "/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:9",
+                            "visit (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/private/synthesis.js:184:9)",
+                            "visit (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/private/synthesis.js:181:9)",
+                            "injectMetadataResources (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/private/synthesis.js:117:5)",
+                            "Object.synthesize (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+                            "App.synth (/tmp/jsii-kernel-U4vgf0/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8248:134",
+                            "Kernel._wrapSandboxCode (/tmp/tmpz_1kb0vf/lib/program.js:8860:24)",
+                            "/tmp/tmpz_1kb0vf/lib/program.js:8248:107",
+                            "Kernel._ensureSync (/tmp/tmpz_1kb0vf/lib/program.js:8841:28)",
+                            "Kernel.invoke (/tmp/tmpz_1kb0vf/lib/program.js:8248:34)",
+                            "KernelHost.processRequest (/tmp/tmpz_1kb0vf/lib/program.js:9757:36)",
+                            "KernelHost.run (/tmp/tmpz_1kb0vf/lib/program.js:9720:22)",
+                            "Immediate._onImmediate (/tmp/tmpz_1kb0vf/lib/program.js:9721:46)",
+                            "processImmediate (node:internal/timers:464:21)"
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}
